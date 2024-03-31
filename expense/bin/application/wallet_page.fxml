@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Pane layoutX="17.0" layoutY="23.0" prefHeight="90.0" prefWidth="364.0" style="-fx-border-color: #1e90ff; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Label layoutX="81.0" layoutY="25.0" text="Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Circle fill="DODGERBLUE" layoutX="41.0" layoutY="45.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="81.0" layoutY="45.0" text="Balance:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="27.0" text="Username" />
+            <Label layoutX="138.0" layoutY="47.0" text="*****" />
+         </children>
+      </Pane>
+      <Button layoutX="21.0" layoutY="361.0" mnemonicParsing="false" onAction="#main" style="-fx-background-color: #1e90ff;" text="back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="21.0" layoutY="138.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="158.0" text="zeng@gmail.com(input data)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="178.0" text="Phone Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="198.0" text="01661161626(input data)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="218.0" text="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="218.0" text="*******(input data)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="328.0" layoutY="361.0" mnemonicParsing="false" onAction="#front" style="-fx-background-color: #1e90ff;" text="log out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
