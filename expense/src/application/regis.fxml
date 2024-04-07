@@ -13,23 +13,24 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="218.0" layoutY="279.0" mnemonicParsing="false" onAction="#main" style="-fx-background-color: #1e90ff;" text="Signup" textFill="WHITE">
+      <Button layoutX="218.0" layoutY="303.0" mnemonicParsing="false" onAction="#rMain" style="-fx-background-color: #1e90ff;" text="Signup" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <TextField layoutX="85.0" layoutY="97.0" prefHeight="25.0" prefWidth="322.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField layoutX="85.0" layoutY="133.0" prefHeight="25.0" prefWidth="322.0" promptText="username" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField layoutX="85.0" layoutY="169.0" prefHeight="25.0" prefWidth="322.0" promptText="Phone Number" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField layoutX="85.0" layoutY="206.0" prefHeight="25.0" prefWidth="322.0" promptText="Create Password" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
-      <TextField layoutX="85.0" layoutY="243.0" prefHeight="25.0" prefWidth="322.0" promptText="Re-enter Password" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
-      <Label layoutX="113.0" layoutY="315.0" text="Aleady have account?">
+      <TextField fx:id="email" layoutX="85.0" layoutY="97.0" prefHeight="25.0" prefWidth="322.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="user" layoutX="85.0" layoutY="133.0" prefHeight="25.0" prefWidth="322.0" promptText="username" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="phone" layoutX="85.0" layoutY="169.0" prefHeight="25.0" prefWidth="322.0" promptText="Phone Number" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="cpass" layoutX="85.0" layoutY="206.0" prefHeight="25.0" prefWidth="322.0" promptText="Create Password" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="rpass" layoutX="85.0" layoutY="243.0" prefHeight="25.0" prefWidth="322.0" promptText="Re-enter Password" style="-fx-background-color: transparent; -fx-border-color: #1e90ff; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label layoutX="113.0" layoutY="339.0" text="Aleady have account?">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="265.0" layoutY="313.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #1e90ff;" text="Login" textFill="WHITE">
+      <Button layoutX="265.0" layoutY="337.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #1e90ff;" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
+      <Label fx:id="alert_message" layoutX="232.0" layoutY="279.0" />
    </children>
 </AnchorPane>
