@@ -31,16 +31,6 @@ public class generate_data {
     
     public static void main(String[] args) {
     	while(check) {
-//        	System.out.print("Name: ");
-//        	name = scanner.next();
-//        	System.out.print("Age: ");
-//        	age = scanner.nextInt();
-//        	System.out.print("phoneNum: ");
-//        	phoneNum = scanner.next();
-//        	System.out.print("Email: ");
-//        	email = scanner.next();
-//        	System.out.print("Password: ");
-//        	password = scanner.next();
         	
         	do {
 	        	sport = rand.nextInt(900) + 10;
@@ -58,21 +48,21 @@ public class generate_data {
         			&& study <= 0 && food <= 0 
         			&& clothing <= 0 && transportation <= 0);
         	
-        	System.out.println(name);
-        	System.out.println(age);
-        	System.out.println(phoneNum);
-        	System.out.println(email);
-        	System.out.println(password);
-        	System.out.println(sport);
-        	System.out.println(entertainment);
-        	System.out.println(shopping); 
-        	System.out.println(housing);
-        	System.out.println(study);
-        	System.out.println(food);
-        	System.out.println(clothing);
-        	System.out.println(transportation);
-        	System.out.println(amount);
-        	check = false;
+        	// System.out.println(name);
+        	// System.out.println(age);
+        	// System.out.println(phoneNum);
+        	// System.out.println(email);
+        	// System.out.println(password);
+        	// System.out.println(sport);
+        	// System.out.println(entertainment);
+        	// System.out.println(shopping); 
+        	// System.out.println(housing);
+        	// System.out.println(study);
+        	// System.out.println(food);
+        	// System.out.println(clothing);
+        	// System.out.println(transportation);
+        	// System.out.println(amount);
+        	// check = false;
         	
         	setData(name, age, phoneNum, email,
             		password, amount, sport, 
@@ -135,17 +125,36 @@ public class generate_data {
     	}
     }
     private static void readFromFile(String filename) {
-    	try(BufferedReader reader = new BufferedReader(new FileReader(filename))){
-    		String line;
-    		while((line = reader.readLine()) != null){
-    			String[] parts = line.split(",");
-    			for(String part : parts) {
-    				System.out.print(part + " ");
-    			}
-    			System.out.println();
-    		}
-    	}catch(IOException e) {
-    		e.printStackTrace();
-    	}
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            int lineCount = 0;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (lineCount < 5) { // Display user details
+                    System.out.println("User Details:");
+                    System.out.println("Name: " + parts[0]);
+                    System.out.println("Age: " + parts[1]);
+                    System.out.println("Phone Number: " + parts[2]);
+                    System.out.println("Email: " + parts[3]);
+                    System.out.println("Password: " + parts[4]);
+                    System.out.println();
+                } else { // Display expense details
+                    System.out.println("Expense Details:");
+                    System.out.println("Sport: " + parts[6]);
+                    System.out.println("Entertainment: " + parts[7]);
+                    System.out.println("Shopping: " + parts[8]);
+                    System.out.println("Housing: " + parts[9]);
+                    System.out.println("Study: " + parts[10]);
+                    System.out.println("Food: " + parts[11]);
+                    System.out.println("Clothing: " + parts[12]);
+                    System.out.println("Transportation: " + parts[13]);
+                    System.out.println();
+                }
+                lineCount++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 }
